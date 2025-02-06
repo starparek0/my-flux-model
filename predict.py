@@ -5,7 +5,7 @@ class Predictor:
         self,
         prompt: str,
         extra_lora: str,
-        image: Image.Image,  # Cog automatycznie przekonwertuje wejście na obiekt PIL.Image
+        image: Image.Image,  # Cog automatycznie konwertuje wejście na obiekt PIL.Image
         mask: Image.Image,   # Podobnie dla maski
         output_format: str = "png"
     ) -> Image.Image:
@@ -13,7 +13,7 @@ class Predictor:
         Generuje obraz na podstawie podanego prompta, wagi LoRA, obrazu wejściowego oraz maski.
         Dla demonstracji funkcja kopiuje obraz wejściowy i nakłada maskę.
         
-        W rzeczywistej implementacji należy zastąpić część kopiowania wywołaniem modelu generującego.
+        W rzeczywistej implementacji należy zastąpić fragment kopiowania wywołaniem modelu generującego.
         """
         # Konwersja obrazu wejściowego
         input_image = image.convert("RGB")
