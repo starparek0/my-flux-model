@@ -3,6 +3,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 import cog
+from pathlib import Path
 
 class Predictor(cog.Predictor):
     def setup(self):
