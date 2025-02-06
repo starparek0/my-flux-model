@@ -5,7 +5,7 @@ class Predictor:
         self,
         prompt: str,
         extra_lora: str,
-        image: Image.Image,  # Cog automatycznie konwertuje wejście na obiekt PIL.Image
+        image: Image.Image,  # Cog automatycznie przekonwertuje wejście na obiekt PIL.Image
         mask: Image.Image,   # Podobnie dla maski
         output_format: str = "png"
     ) -> Image.Image:
@@ -20,7 +20,7 @@ class Predictor:
         input_mask = mask.convert("L")
         
         # !!! TU WPISZ WYWOŁANIE SWOJEGO MODELU !!!
-        # Dla celów demonstracyjnych kopiujemy oryginalny obraz:
+        # Dla celów demonstracyjnych kopiujemy obraz wejściowy:
         generated_image = input_image.copy()
         
         # Nałożenie maski – zastąpienie fragmentu oryginalnego wygenerowanym obrazem tam, gdzie maska ma wartość 255
